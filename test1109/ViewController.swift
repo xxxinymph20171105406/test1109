@@ -232,8 +232,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func doc(_ sender: Any) {
-        
+        result.text = result.text! + "."
+        judge = 1
     }
+    
+    @IBAction func percent(_ sender: Any) {
+        let count = Double(result.text!)!
+        let count2 = count * 0.01
+        result.text = String(count2)
+        re = 0
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
